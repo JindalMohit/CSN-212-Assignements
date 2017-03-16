@@ -7,6 +7,12 @@ int max(int a,int b){
 
 int main(){
 	int n,*arr,*ans_pos,*ans_neg;
+	/*
+	*There is slight modification in input format
+	*Instead of input as string i have taken input as array
+	*first input is no. of elements=n
+	*then array of n elements as input
+	*/
 	cin>>n;
 	int diff;
 	arr=new int[n];

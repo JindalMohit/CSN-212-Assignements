@@ -9,6 +9,11 @@ int main(){
 	int width, height;
 	cin>>width>>height;
 	int m,a,b,c,d;
+	/*
+	*Instead of taking input as string, i have taken input explicitly.
+	*m is the number of untraversable blocks
+	*{a,b,c,d} specifies a single untraversal block
+	*/
 	cin>>m;
 	for(int i=0;i<m;i++){
 		cin>>a>>b>>c>>d;
