@@ -17,7 +17,8 @@ int main(){
 	cout<<"a,b,src belongs to 0-V-1\n\n";
 
 	int T;
-	cin>>T;
+	//cin>>T;
+	T=1;
 	while(T--){
 		int v,e,src;
 		cin>>v>>e;
@@ -28,8 +29,6 @@ int main(){
 			cin>>edge[i].src>>edge[i].dest>>edge[i].cost;
 		}
 
-		t=clock();
-
 		int *dist;
 		dist = new int[v];
 		for(int i=0;i<v;i++){
@@ -38,6 +37,9 @@ int main(){
 		dist[src]=0;
 		int a,b,c;
 		int check;
+		
+		t=clock();
+
 		for(int i=0;i<v;i++){
 			for(int j=0;j<e;j++){
 				a=edge[j].src; b=edge[j].dest; c=edge[j].cost;
@@ -53,6 +55,9 @@ int main(){
 				}
 			}
 		}
+
+		t = clock() - t;
+
 		if(check==1){
 			cout<<"Negative cycle found\n";
 		}
@@ -67,7 +72,6 @@ int main(){
 			cout<<endl;
 		}
 
-		t = clock() - t;
 		printf ("It took %d clicks (%f seconds).\n",t,((float)t)/CLOCKS_PER_SEC);	
 	}
 	return 0;
